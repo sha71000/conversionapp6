@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourthActivity">
+
+
+    <TextView
+        android:id="@+id/celsius"
+        android:layout_width="128dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginBottom="20dp"
+        android:text="Celsius:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/cel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back4" />
+
+    <TextView
+        android:id="@+id/fahrenheit"
+        android:layout_width="137dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="35dp"
+        android:text="Fahrenheit:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/fah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cel" />
+
+    <TextView
+        android:id="@+id/kelvin"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginBottom="29dp"
+        android:text="Kelvin:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/kel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fah" />
+
+    <Button
+        android:id="@+id/convertc"
+        android:layout_width="115dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="149dp"
+        android:background="#2196F3"
+        android:onClick="onConvert1"
+        android:text="Convert"
+        app:layout_constraintBottom_toTopOf="@+id/convertf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/convertf"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="113dp"
+        android:background="#2196F3"
+        android:onClick="onConvert2"
+        android:text="Convert"
+        app:layout_constraintBottom_toTopOf="@+id/convertk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fah"
+        app:layout_constraintTop_toBottomOf="@+id/convertc" />
+
+    <Button
+        android:id="@+id/convertk"
+        android:layout_width="118dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="129dp"
+        android:background="#2196F3"
+        android:onClick="onConvert3"
+        android:text="Convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kel"
+        app:layout_constraintTop_toBottomOf="@+id/convertf" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="177dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginBottom="38dp"
+        android:background="#8BC34A"
+        android:onClick="onReset"
+        android:text="Reset"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kel" />
+
+    <EditText
+        android:id="@+id/cel"
+        android:layout_width="137dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/fahrenheit"
+        app:layout_constraintEnd_toStartOf="@+id/convertc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsius" />
+
+    <EditText
+        android:id="@+id/fah"
+        android:layout_width="135dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/kelvin"
+        app:layout_constraintEnd_toStartOf="@+id/convertf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheit" />
+
+    <EditText
+        android:id="@+id/kel"
+        android:layout_width="133dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toStartOf="@+id/convertk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kelvin" />
+
+    <Button
+        android:id="@+id/back4"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="28dp"
+        android:background="#FF5722"
+        android:onClick="onBack4"
+        android:text="Back"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/celsius"
+        app:layout_constraintEnd_toEndOf="@+id/celsius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
